@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Aditya Chaturvedi — Systems Worth Pressing Enter For</title>
+  <meta name="description" content="Portfolio of Aditya Chaturvedi — Software Engineer & Systems Builder. Inspired by peaches.world with unhidden Renaissance artworks and modern tech.">
+
+  <!-- Favicon SVG (Tactile Keycap Icon) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2305070b'/%3E%3Cpath d='M8 10h16v12h-8v-4h-8z' fill='%23ff5a00'/%3E%3C/svg%3E">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="voll">
+
+  <!-- Background Renaissance Artwork Layers (100% Unhidden & Crisp) -->
+  <div id="bg-artwork-container" aria-hidden="true">
+    <div id="bg-art-home" class="bg-art active" style="background-image: url('assets/galileo_palace.jpg');"></div>
+    <div id="bg-art-story" class="bg-art" style="background-image: url('assets/aditya_library.jpg');"></div>
+  </div>
+
+  <!-- Dynamic Generative Background Canvas -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- Phosphor Transition Flash -->
+  <div id="blitz" aria-hidden="true"></div>
+
+  <!-- Telemetry Beveled Badges (#kopf, #ort) -->
+  <div class="peaches-chip" id="kopf">
+    <div class="live-dot" title="Systems Active"></div>
+    <span id="chapter-indicator" data-s="Chapter 01 / Home">Chapter 01 / Home</span>
+  </div>
+
+  <div class="peaches-chip" id="ort">
+    <span>NEW DELHI 28.61 N  77.20 E</span>
+  </div>
+
+  <div id="telemetry-depth">
+    <span>[ 000 KM/H ]</span>
+  </div>
+
+  <!-- Tactile Mechanical Back / Delete Keycap (Top Right) -->
+  <button id="zurueck" type="button" aria-label="Delete — Return to Start">
+    <span>Delete</span>
+    <svg viewBox="0 0 34 22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round">
+      <path d="M11 1H33V21H11L1 11Z"/>
+      <path d="M17 7l8 8M25 7l-8 8"/>
+    </svg>
+  </button>
+
+  <!-- Vertical Right-Hand Raster Switcher (#wahl) -->
+  <div id="wahl" role="toolbar" aria-label="Visual Raster Modes">
+    <span>GRID</span>
+    <button data-r="1" type="button">PIXELS</button>
+    <button data-r="2" type="button">DOTS</button>
+    <button data-r="3" type="button">GLYPHS</button>
+    <button data-r="4" type="button">LINES</button>
+    <button data-r="5" class="active" aria-pressed="true" type="button">FULL</button>
+  </div>
+
+  <!-- Main Multi-Chapter App Stage -->
+  <main>
+
+    <!-- ====================================================================
+         CHAPTER 01: HERO GATE ("TOR")
+         ==================================================================== -->
+    <section class="chapter active" id="chapter-home">
+      <!-- Big Hero Title -->
+      <h1 id="titel" data-s="ADITYA" aria-label="Aditya">ADITYA</h1>
+
+      <!-- Slogan Badge -->
+      <div class="peaches-chip" id="satz" data-s="SYSTEMS WORTH PRESSING ENTER FOR.">
+        <b>SOFTWARE</b> — SYSTEMS WORTH PRESSING ENTER FOR.
+      </div>
+
+      <!-- 3D Mechanical Enter Keycap (#taste) -->
+      <div class="gate-wrapper">
+        <button id="taste" type="button" aria-label="Press Enter to launch portfolio">
+          <svg viewBox="0 0 260 190">
+            <defs>
+              <linearGradient id="orange-grad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#ff8a2a"/>
+                <stop offset="100%" stop-color="#ff4d00"/>
+              </linearGradient>
+              <path id="enter-shape" d="M12 0H248A12 12 0 0 1 260 12V166A12 12 0 0 1 248 178H82A12 12 0 0 1 70 166V102A12 12 0 0 0 58 90H12A12 12 0 0 1 0 78V12A12 12 0 0 1 12 0Z"/>
+            </defs>
+            <g class="key-base" transform="translate(0, 10)">
+              <use href="#enter-shape"/>
+            </g>
+            <g class="key-cap">
+              <use href="#enter-shape"/>
+              <text x="32" y="44" class="key-label">ENTER</text>
+              <path class="key-arrow" d="M195 125h-50v-40M145 125l14-14M145 125l14 14"/>
+            </g>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         CHAPTER 02: WHO IS TALKING (THE ORIGIN STORY TIMELINE)
+         Matching screenshot 2 exactly: Big bold header & scroll down pill
+         ==================================================================== -->
+    <section class="chapter" id="chapter-story">
+      <div class="story-hero-area">
+        <h2 class="story-big-title" data-s="Who is talking">Who is talking</h2>
+        <button class="scroll-down-pill" id="btn-scroll-story" type="button">
+          <svg viewBox="0 0 22 28" aria-hidden="true"><path d="M8 1H14V15H21L11 27L1 15H8Z"/></svg>
+          <span data-s="SCROLL DOWN">SCROLL DOWN</span>
+        </button>
+      </div>
+
+      <div class="story-subsections" id="story-content-anchor">
+        <div class="story-block">
+          <div class="klein" data-s="01 / Not a straight line">01 / Not a straight line</div>
+          <h3 data-s="I build software from first principles.">I build software from first principles.</h3>
+          <p class="lead" data-s="No shortcuts. An inverted index search engine from scratch, distributed real-time chat with zero persistence, low-level design canvases, and autonomous SRE change-intelligence platforms.">
+            No shortcuts. An inverted index search engine from scratch, distributed real-time chat with zero persistence, low-level design canvases, and autonomous SRE change-intelligence platforms.
+          </p>
+        </div>
+
+        <div class="story-block">
+          <div class="klein" data-s="02 / The origin story">02 / The origin story</div>
+          <h3 data-s="Want to see how I got here?">Want to see how I got here?</h3>
+          
+          <div class="bang-trigger-box">
+            <button class="btn-bang" id="btn-big-bang" type="button">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v6l4 2"/>
+              </svg>
+              <span data-s="SWITCH ON THE UNIVERSE">SWITCH ON THE UNIVERSE</span>
+            </button>
+          </div>
+
+          <!-- The Epoch Timeline -->
+          <ol class="epoch-timeline" id="epoch-timeline">
+            <li class="epoch-item">
+              <span class="epoch-label" data-s="Epoch 00 // First Principles">Epoch 00 // First Principles</span>
+              <h4 class="epoch-title" data-s="Tinkering, Disassembly & Foundations">Tinkering, Disassembly & Foundations</h4>
+              <p class="epoch-desc" data-s="Taking machines apart, writing first scripts, and learning that robust software is built from the ground up: memory, algorithms, and clean system abstractions.">
+                Taking machines apart, writing first scripts, and learning that robust software is built from the ground up: memory, algorithms, and clean system abstractions.
+              </p>
+            </li>
+
+            <li class="epoch-item">
+              <span class="epoch-label" data-s="Epoch 01 // Search & Information Retrieval">Epoch 01 // Search & Information Retrieval</span>
+              <h4 class="epoch-title" data-s="Satyanveshi — Custom Search Engine">Satyanveshi — Custom Search Engine</h4>
+              <p class="epoch-desc" data-s="Refused to rely on black-box search libraries. Built an inverted index from scratch, tuned BM25 ranking formulas, engineered Trie prefix trees, and added Levenshtein distance fuzzy tolerance.">
+                Refused to rely on black-box search libraries. Built an inverted index from scratch, tuned BM25 ranking formulas, engineered Trie prefix trees, and added Levenshtein distance fuzzy tolerance.
+              </p>
+            </li>
+
+            <li class="epoch-item">
+              <span class="epoch-label" data-s="Epoch 02 // Distributed Ephemeral Realtime">Epoch 02 // Distributed Ephemeral Realtime</span>
+              <h4 class="epoch-title" data-s="Phoenix Ephemeral — Sub-millisecond Messaging">Phoenix Ephemeral — Sub-millisecond Messaging</h4>
+              <p class="epoch-desc" data-s="Tackled low-latency state synchronization with Redis pub/sub and Upstash real-time primitives. Implemented strict zero-persistence lifecycles where room closure cryptographically erases all memory buffers.">
+                Tackled low-latency state synchronization with Redis pub/sub and Upstash real-time primitives. Implemented strict zero-persistence lifecycles where room closure cryptographically erases all memory buffers.
+              </p>
+            </li>
+
+            <li class="epoch-item">
+              <span class="epoch-label" data-s="Epoch 03 // Visual Systems & Architecture">Epoch 03 // Visual Systems & Architecture</span>
+              <h4 class="epoch-title" data-s="Takshaka & SyncEngine — Visual Node Platforms">Takshaka & SyncEngine — Visual Node Platforms</h4>
+              <p class="epoch-desc" data-s="Engineered interactive canvas platforms for developers. Whether modeling class diagrams with rubric-based AI architectural critique or configuring event-driven workflow automation graphs.">
+                Engineered interactive canvas platforms for developers. Whether modeling class diagrams with rubric-based AI architectural critique or configuring event-driven workflow automation graphs.
+              </p>
+            </li>
+
+            <li class="epoch-item highlight">
+              <span class="epoch-label" data-s="Epoch 04 // Autonomous SRE & Change Intelligence">Epoch 04 // Autonomous SRE & Change Intelligence</span>
+              <h4 class="epoch-title" data-s="ChangeGuard — SRE Safety Intelligence Platform">ChangeGuard — SRE Safety Intelligence Platform</h4>
+              <p class="epoch-desc" data-s="Combined AST code parsing, telemetry anomaly correlation, MCP protocol tools, and autonomous GitOps rollbacks to predict and prevent production incidents before deployment.">
+                Combined AST code parsing, telemetry anomaly correlation, MCP protocol tools, and autonomous GitOps rollbacks to predict and prevent production incidents before deployment.
+              </p>
+            </li>
+          </ol>
+        </div>
+
+        <div class="story-block">
+          <div class="klein" data-s="03 / Plot twist">03 / Plot twist</div>
+          <h3 data-s="Systems by day. Spaceships by night.">Systems by day. Spaceships by night.</h3>
+          <p class="lead" data-s="An analytical mind with a builder's instinct. Code isn't just lines in an editor; it is resilient infrastructure that powers mission-critical operations.">
+            An analytical mind with a builder's instinct. Code isn't just lines in an editor; it is resilient infrastructure that powers mission-critical operations.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         CHAPTER 03: WORK EXHIBITION (ALL 10 PROJECTS IN ORDER)
+         ==================================================================== -->
+    <section class="chapter" id="chapter-work">
+      <div class="work-header">
+        <div class="work-title-area">
+          <h2 data-s="Selected Work">Selected Work</h2>
+          <p data-s="Curated production systems, distributed automation engines, and search architectures from @karambitbarrage15.">
+            Curated production systems, distributed automation engines, and search architectures from @karambitbarrage15.
+          </p>
+        </div>
+        <div class="work-curation-pill">
+          <span>10 Featured Systems / Matrix View</span>
+        </div>
+      </div>
+
+      <!-- Tunnel Accelerator Controller -->
+      <div class="tunnel-controller">
+        <button class="btn-turbo" id="btn-turbo-tunnel" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 5v14M5 12l7 7 7-7"/>
+          </svg>
+          <span data-s="TRAVEL THROUGH WARP TUNNEL">TRAVEL THROUGH WARP TUNNEL</span>
+        </button>
+      </div>
+
+      <!-- The Curated 3-Column Work Grid (10 Repos) -->
+      <div class="gitter" id="work-grid">
+        <!-- Rendered dynamically via js/app.js -->
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         CHAPTER 04: TRANSMISSION / CONTACT
+         ==================================================================== -->
+    <section class="chapter" id="chapter-contact">
+      <div class="contact-header">
+        <h2 data-s="Transmission">Transmission</h2>
+        <p data-s="Have a challenging system to design, an autonomous workflow to architect, or an open-source collaboration? Transmit your signal below.">
+          Have a challenging system to design, an autonomous workflow to architect, or an open-source collaboration? Transmit your signal below.
+        </p>
+      </div>
+
+      <form class="contact-form" id="transmission-form" novalidate>
+        <div class="form-field">
+          <label for="input-name"><em>01 /</em> Your Name</label>
+          <input type="text" id="input-name" required placeholder="e.g. Linus Torvalds">
+        </div>
+
+        <div class="form-field">
+          <label for="input-email"><em>02 /</em> Your Frequency (Email)</label>
+          <input type="email" id="input-email" required placeholder="name@domain.com">
+        </div>
+
+        <div class="form-field">
+          <label><em>03 /</em> What are we building?</label>
+          <div class="chips-group">
+            <button type="button" class="chip-btn selected">Change Intelligence</button>
+            <button type="button" class="chip-btn">Workflow Automation</button>
+            <button type="button" class="chip-btn">AI Agents & MCP</button>
+            <button type="button" class="chip-btn">Search & BM25</button>
+            <button type="button" class="chip-btn">Distributed Backend</button>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="input-message"><em>04 /</em> Mission Parameters</label>
+          <textarea id="input-message" required placeholder="Tell me about your architecture, timeline, and goals..."></textarea>
+        </div>
+
+        <div class="form-bottom">
+          <button class="btn-send" type="submit">
+            <span>TRANSMIT SIGNAL</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </button>
+
+          <div class="contact-meta">
+            <span>Direct Signal: <a href="mailto:kalelrjbrownboy@gmail.com">kalelrjbrownboy@gmail.com</a></span>
+            <span>GitHub Core: <a href="https://github.com/karambitbarrage15" target="_blank" rel="noopener">github.com/karambitbarrage15</a></span>
+          </div>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ====================================================================
+       RETRO STATUS.EXE PROJECT INSPECTION MODAL
+       ==================================================================== -->
+  <div id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-window">
+      <div class="modal-header">
+        <span id="modal-header-tag">system_inspect.exe</span>
+        <button class="modal-close-btn" id="modal-close" type="button" aria-label="Close dialog">✕</button>
+      </div>
+      <div class="modal-body">
+        <span class="modal-category" id="modal-category">01 // AUTONOMOUS SRE</span>
+        <h3 class="modal-title" id="modal-title">ChangeGuard</h3>
+        <p class="modal-desc" id="modal-desc">Detailed architecture description...</p>
+        
+        <div class="modal-tech-list" id="modal-tech">
+          <!-- Populated dynamically -->
+        </div>
+
+        <div class="modal-actions">
+          <a class="modal-action-btn modal-btn-primary" id="modal-github-link" href="#" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+            VIEW REPOSITORY
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       FLOATING BOTTOM CONTROL DOCK (#leiste)
+       ==================================================================== -->
+  <nav id="leiste" aria-label="Page Navigation">
+    <button type="button" data-nav="home" class="active">Home</button>
+    <button type="button" data-nav="story">Who is talking</button>
+    <button type="button" data-nav="work">Work</button>
+    <button type="button" data-nav="contact">References</button>
+
+    <div class="dock-divider"></div>
+
+    <button type="button" style="padding: 7px 10px; font-size: 10px;" title="English Language">EN</button>
+    <button type="button" id="btn-sound" title="Toggle Mechanical Audio">SFX: ON</button>
+  </nav>
+
+  <!-- Client Scripts -->
+  <script src="js/sound.js"></script>
+  <script src="js/decipher.js"></script>
+  <script src="js/canvas.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
